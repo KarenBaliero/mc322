@@ -21,7 +21,6 @@ public interface num_sintomas {
 public interface doencas_possiveis {
     int doencas_possiveis(String[][] matriz, String sintoma) {}
 }
-/home/matheus/IdeaProjects/mc322/src/Main.java
 
 public interface Tratamento_ordem_coluna {
     void ordena_coluna(String[][] matriz) {}
