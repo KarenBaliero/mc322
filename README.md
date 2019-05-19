@@ -10,7 +10,7 @@ E mais especificamente sobre tabelas em: https://help.github.com/en/articles/org
 Campo | Valor
 ----- | -----
 Classe | `main.java`
-Autores | Gustavo Praciano, Heigon Soldera, Karen Baliero, Mariana Megumi, Matheus Carvalho, Piethro Cesar
+Autores | Gustavo Praciano, Heigon Soldera, Karen Baliero, Mariana Megumi, Matheus Hatzlhoffer, Piethro Cesar
 Objetivo | Realiza diversas funções na matriz para mudá-la conforme necessário.
 Interface | `Tratamento_matriz`
 ~~~
