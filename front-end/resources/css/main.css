@@ -1,0 +1,68 @@
+body {
+	background-color: #CED6FF;
+}
+
+h1 {
+	font-family: 'Butcherman';
+	font-style: normal;
+	font-weight: normal;
+	font-size: 96px;
+	text-align: center;
+	color-background: #000000;
+	margin: auto;
+}
+
+@font-face {
+	font-family: 'Butcherman';
+	src: ;
+}
+
+p {
+	font-family: Atma;
+	font-style: normal;
+	font-weight: normal;
+	font-size: 36px;
+	text-align: center;
+	padding-left: 100px;
+	padding-right: 100px;
+}
+
+p.explained {
+	margin: auto;
+}
+
+.button {
+	background-color: #2320C8; 
+	box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+	border-radius: 10px;
+	padding: 25px;
+	
+	color: white;
+	text-align: center;
+	font-size: 50px;
+	font-family: 'Audiowide';
+
+	align-content: center;
+	-webkit-transition-duration: 0.4s; /* Safari */
+	transition-duration: 0.4s;
+}
+
+.button:hover {
+	background-color: #2320A8;
+	color: white;
+}
+
+h2 {
+
+}
+
+div.first-choice {
+	text-align: center;
+	padding-top: 25px;
+}
+
+div.initial-text {
+	width: 300px;
+	margin: auto;
+	border: 1px solid;
+}
