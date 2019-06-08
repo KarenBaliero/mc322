@@ -12,23 +12,25 @@ h1 {
 	margin: auto;
 }
 
-@font-face {
-	font-family: 'Butcherman';
-	src: ;
-}
-
 p {
 	font-family: Atma;
 	font-style: normal;
 	font-weight: normal;
-	font-size: 36px;
+	font-size: 32px;
 	text-align: center;
-	padding-left: 100px;
-	padding-right: 100px;
+	margin: auto;
 }
 
 p.explained {
 	margin: auto;
+	padding-left: 10%;
+	padding-right: 10%;
+}
+
+p.question {
+	padding-left: 10%;
+	padding-right: 10%;
+	margin-top: 20px;
 }
 
 .button {
@@ -36,15 +38,22 @@ p.explained {
 	box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
 	border-radius: 10px;
 	padding: 25px;
+	margin: 20px;
 	
 	color: white;
 	text-align: center;
 	font-size: 50px;
 	font-family: 'Audiowide';
+	font-style: normal;
 
 	align-content: center;
 	-webkit-transition-duration: 0.4s; /* Safari */
 	transition-duration: 0.4s;
+}
+
+a {
+	font-style: normal;
+	text-decoration: normal;
 }
 
 .button:hover {
@@ -52,17 +61,92 @@ p.explained {
 	color: white;
 }
 
-h2 {
-
-}
-
 div.first-choice {
 	text-align: center;
-	padding-top: 25px;
+	padding: 3%;
 }
 
 div.initial-text {
 	width: 300px;
 	margin: auto;
 	border: 1px solid;
+	text-align: center;
 }
+
+input {
+	width: 30%;
+	height: 50px;
+	margin: auto;
+	padding: auto;
+	border-radius: 5px;
+	box-sizing: border-box;
+	font-size: 36px;
+	text-align: center;
+}
+
+input[type=button], input[type=submit], input[type=reset] {
+	background-color: #2320C8; 
+	box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+	border-radius: 10px;
+	padding: 25px;
+	margin: 20px;
+	text-decoration: none;
+	margin: 4px 2px;
+	cursor: pointer;
+}
+
+.grid-container {
+	display: grid;
+	grid-gap: 5%;
+	grid-row: auto;
+	justify-content: space-evenly;
+	align-content: center;
+}
+
+img.hospital-bg {
+	display: block;
+	align-content: center;
+	margin-left: auto;
+	margin-right: auto;
+	width: 55%;
+	z-index: 1;
+}
+
+img.bubble {
+	position: relative;
+	z-index: 2;
+}
+
+div.diagnosis {
+	background-color: white;
+	border-style: solid;
+	width: 75%;
+	margin-left: 10%;
+	margin-right: 10%;
+	align-self: center;
+	text-align: center;
+}
+
+.button-diag {
+	background-color: #2320C8; 
+	box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+	border-radius: 10px;
+	width: 15%;
+	padding: 25px;
+	margin: 20px;
+	
+	color: white;
+	text-align: center;
+	font-size: 18px;
+	font-family: 'Audiowide';
+	font-style: normal;
+
+	align-content: center;
+	-webkit-transition-duration: 0.4s; /* Safari */
+	transition-duration: 0.4s;	
+}
+
+div.diag {
+
+}
+
