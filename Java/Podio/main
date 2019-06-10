@@ -1,0 +1,15 @@
+public class Podio
+{
+    // arguments are passed using the text field below this editor
+    public static void main(String[] args)
+    {
+        Leaderboard primeiros = new Leaderboard();
+        primeiros.addPlayer(10, "Joao");
+        primeiros.addPlayer(20, "JP");
+        primeiros.addPlayer(30, "Lucas");
+        primeiros.addPlayer(40, "Camale");
+        primeiros.addPlayer(50, "Isso");
+        primeiros.addPlayer(60, "Win");
+        primeiros.showLeaders();
+    }
+}
