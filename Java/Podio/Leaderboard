@@ -1,0 +1,46 @@
+public class Leaderboard{
+    ArrayList<Player> vencedores;
+
+    public Leaderboard(){
+        vencedores = new ArrayList<Player>();
+        for(int i=0; i<5; i++){
+            vencedores.add(new Player(0, "-"));
+        }
+    }
+
+    public void addPlayer(int score, String name){
+        vencedores.add(new Player(score, name));
+        atualizaLeader();
+        deletaLeader();
+    }
+
+    public void deletaLeader(){
+        vencedores.remove(5);
+    }
+
+    public void atualizaLeader(){
+        int pos_novo = 5;
+        for(int i=4; i>=0; i--){
+            if(vencedores.get(pos_novo).getScore() > vencedores.get(i).getScore()){
+                chanceLeader(pos_novo, i);
+                pos_novo--;
+            }
+        }
+    }
+
+    public void chanceLeader(int p1, int p2){
+        int p1score = vencedores.get(p1).getScore();
+        String p1name = vencedores.get(p1).getName();
+        vencedores.get(p1).setScore(vencedores.get(p2).getScore());
+        vencedores.get(p1).setName(vencedores.get(p2).getName());
+        vencedores.get(p2).setScore(p1score);
+        vencedores.get(p2).setName(p1name);
+    }
+
+    public void showLeaders(){
+        System.out.println("----Podio----");
+        for(int i=0; i<5; i++){
+            System.out.println("Jogador n "+ i + " Nome: " + vencedores.get(i).getName() + " Pontuação: " + vencedores.get(i).getScore());
+        }
+    }
+}
