@@ -1,0 +1,94 @@
+/* Generated from Java with JSweet 2.2.0-SNAPSHOT - http://www.jsweet.org */
+var Player = (function () {
+    function Player(score, name) {
+        if (this.score === undefined)
+            this.score = 0;
+        if (this.name === undefined)
+            this.name = null;
+        this.score = score;
+        this.name = name;
+    }
+    Player.prototype.getScore = function () {
+        return this.score;
+    };
+    Player.prototype.getName = function () {
+        return this.name;
+    };
+    Player.prototype.setScore = function (score) {
+        this.score = score;
+    };
+    Player.prototype.setName = function (name) {
+        this.name = name;
+    };
+    return Player;
+}());
+Player["__class"] = "Player";
+var Leaderboard = (function () {
+    function Leaderboard() {
+        if (this.vencedores === undefined)
+            this.vencedores = null;
+        this.vencedores = ([]);
+        for (var i = 0; i < 5; i++) {
+            {
+                /* add */ (this.vencedores.push(new Player(0, "-")) > 0);
+            }
+            ;
+        }
+    }
+    Leaderboard.prototype.addPlayer = function (score, name) {
+        /* add */ (this.vencedores.push(new Player(score, name)) > 0);
+        this.atualizaLeader();
+        this.deletaLeader();
+    };
+    Leaderboard.prototype.deletaLeader = function () {
+        /* remove */ this.vencedores.splice(5, 1)[0];
+    };
+    Leaderboard.prototype.atualizaLeader = function () {
+        var pos_novo = 5;
+        for (var i = 4; i >= 0; i--) {
+            {
+                if (this.vencedores[pos_novo].getScore() > this.vencedores[i].getScore()) {
+                    this.chanceLeader(pos_novo, i);
+                    pos_novo--;
+                }
+            }
+            ;
+        }
+    };
+    Leaderboard.prototype.chanceLeader = function (p1, p2) {
+        var p1score = this.vencedores[p1].getScore();
+        var p1name = this.vencedores[p1].getName();
+        /* get */ this.vencedores[p1].setScore(/* get */ this.vencedores[p2].getScore());
+        /* get */ this.vencedores[p1].setName(/* get */ this.vencedores[p2].getName());
+        /* get */ this.vencedores[p2].setScore(p1score);
+        /* get */ this.vencedores[p2].setName(p1name);
+    };
+    Leaderboard.prototype.showLeaders = function () {
+        console.info("----Podio----");
+        for (var i = 0; i < 5; i++) {
+            {
+                console.info("Jogador n " + i + " Nome: " + this.vencedores[i].getName() + " Pontua\ufffd\ufffd\ufffd\ufffdo: " + this.vencedores[i].getScore());
+            }
+            ;
+        }
+    };
+    return Leaderboard;
+}());
+Leaderboard["__class"] = "Leaderboard";
+var Podio = (function () {
+    function Podio() {
+    }
+    Podio.main = function (args) {
+        var primeiros = new Leaderboard();
+        primeiros.addPlayer(10, "Joao");
+        primeiros.addPlayer(20, "JP");
+        primeiros.addPlayer(30, "Lucas");
+        primeiros.addPlayer(40, "Camale");
+        primeiros.addPlayer(50, "Isso");
+        primeiros.addPlayer(60, "Win");
+        primeiros.showLeaders();
+    };
+    return Podio;
+}());
+Podio["__class"] = "Podio";
+Podio.main(null);
