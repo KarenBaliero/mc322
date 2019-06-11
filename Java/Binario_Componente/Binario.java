@@ -20,7 +20,7 @@ public class Binario implements IBinario {
         ArvoreAvl arv = new ArvoreAvl() ;
 
         int pos_doenca = ma[0].length - 1 ;
-        for(int i = 0 ; i < pos_doenca ; i++ ){
+        for(int i = 1 ; i < pos_doenca ; i++ ){
             arv.inserir( transforma_bin(ma[i]), ma[i][pos_doenca] ); ;
         }
 
