@@ -1,0 +1,11 @@
+febre,náusea,tosse,dores no corpo,fadiga,doença
+t,f,t,t,t,Gripe
+f,t,f,t,f,Ascaridíase
+t,f,t,f,t,Tuberculose
+t,t,f,t,f,Meningite
+t,f,f,t,f,Malária
+f,f,t,t,t,Pneumonia
+f,t,f,f,t,Dengue
+f,t,t,t,f,Apendicite
+f,t,f,t,f,Gastrite
+f,f,f,t,f,Teníase
