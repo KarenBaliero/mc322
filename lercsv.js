@@ -1,8 +1,8 @@
 var DataSetComponent = (function () {
     function DataSetComponent() {
         /*private*/ this.dataSource = null;
-        /*private*/ this.attributes = [];
-        /*private*/ this.instances = null;
+        /*private*/ this.attributes = new Array();
+        /*private*/ this.instances = new Array();
     }
     DataSetComponent.prototype.getDataSource = function () {
         return this.dataSource;
@@ -10,8 +10,8 @@ var DataSetComponent = (function () {
     DataSetComponent.prototype.setDataSource = function (dataSource) {
         this.dataSource = dataSource;
         if (dataSource == null) {
-            this.attributes = [];
-            this.instances = null;
+            this.attributes = new Array();
+            this.instances = new Array;
         }
         else
             this.readDS();
