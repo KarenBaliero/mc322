@@ -4,12 +4,34 @@ public class Podio
     public static void main(String[] args)
     {
         Leaderboard primeiros = new Leaderboard();
-        primeiros.addPlayer(10, "Joao");
-        primeiros.addPlayer(20, "JP");
-        primeiros.addPlayer(30, "Lucas");
-        primeiros.addPlayer(40, "Camale");
-        primeiros.addPlayer(50, "Isso");
-        primeiros.addPlayer(60, "Win");
+        Sintomas listas = new Sintomas();
+        int vidas = 3;
+        int pontos = 0;
+        String nomeatual= "Joao";
+        // após 5 jogadas entra no podio:
+        for(int i = 0; i<5; i++){
+            if(vida > 0){
+                // sort na matriz puxa dados
+
+                // mostra vários sintomas
+                listas.mostrasintomas();
+                // advinha qual é a doenca
+                resposta = listas.advinhadoenca("Malaria");
+                // se acertou soma pontos
+                if(resposta == 0 ){
+                    System.out.println("Puts voce errou e perdeu uma medica! Mas nao desista");
+                    vidas--;
+                }
+                else {
+                    System.out.println("Parabens voce acertou! Continue tentando");
+                    pontos+=10;
+                }
+
+            }
+
+        }
+        primeiros.addPlayer(pontos, nomeatual);
         primeiros.showLeaders();
+
     }
 }
