@@ -1,5 +1,16 @@
+import java.util.Random;
 public class Podio
 {
+    public static String[] puxa_dados(String[][] Matriz){
+        String[][] nova =tira_repetida(Matriz);
+        ordenar(nova, 0,1, nova.length);
+        Random gerador = new Random();
+        int a = gerador.nextInt(nova.length);
+        while (a==0){
+            a=gerador.nextInt(nova.length);
+        }
+        return nova[a];
+    }
     // arguments are passed using the text field below this editor
     public static void main(String[] args)
     {
@@ -12,7 +23,7 @@ public class Podio
         for(int i = 0; i<5; i++){
             if(vida > 0){
                 // sort na matriz puxa dados
-
+                
                 // mostra vários sintomas
                 listas.mostrasintomas();
                 // advinha qual é a doenca
