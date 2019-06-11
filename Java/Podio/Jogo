@@ -1,0 +1,38 @@
+public class Jogo{
+            String nome;
+            public Jogo(String nome){
+                this.nome = nome;
+            }
+            
+            public int jogar(){
+                int vidas = 3;
+                int pontos = 0;
+                
+                for(int i = 0; i<5; i++){
+                    if(vida > 0){
+                        // sort na matriz puxa dados
+                        sintomas = puxa_dados(getMatriz());
+                        // mostra vários sintomas
+                        listas.mostrasintomas();
+                        // advinha qual é a doenca
+                        resposta = listas.advinhadoenca("Malaria");
+                        // se acertou soma pontos
+                        if(resposta == 0 ){
+                            System.out.println("Puts voce errou e perdeu uma medica! Mas nao desista, voce ainda tem " + vidas + "vida(s)");
+                            vidas--;
+                        }
+                        else {
+                            System.out.println("Parabens voce acertou! Continue tentando");
+                            pontos+=10;
+                        }
+
+                    }
+
+                }
+                return pontos;
+            }
+     
+         public String getNome(){
+             return this.nome;
+         }
+}
