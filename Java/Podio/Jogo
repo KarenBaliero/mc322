@@ -1,8 +1,10 @@
  public class Jogo{
             Sintomas listas = new Sintomas();
             String nome;
-            public Jogo(String nome){
+            String diagnostico;
+            public Jogo(String nome, String diagnostico){
                 this.nome = nome;
+                this.diagnostico =diagnostico;
             }
             
             public int jogar(){
@@ -15,10 +17,11 @@
                         // mostra vários sintomas
                         listas.mostrasintomas();
                         // advinha qual é a doenca
-                        resposta = listas.advinhadoenca("Malaria");
+                        System.out.println("Seu diagnostico eh: " + diagnostico);
+                        resposta = listas.advinhadoenca(diagnostico);
                         // se acertou soma pontos
                         if(resposta == 0 ){
-                            System.out.println("Puts voce errou e perdeu uma medica! Mas nao desista, voce ainda tem " + vidas + "vida(s)");
+                            System.out.println("Puts voce errou e perdeu uma medica! Mas nao desista, voce ainda tem " + vidas + " vida(s)");
                             vidas--;
                         }
                         else {
