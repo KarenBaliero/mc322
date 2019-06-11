@@ -2,12 +2,14 @@ import java.util.Random;
 public class Podio
 {
     public static String[] puxa_dados(String[][] Matriz){
+        import java.util.Random;
         Leaderboard primeiros = new Leaderboard();
-        Jogo jogo1 = new Jogo("Joao");
+        Jogo jogo1 = new Jogo("Joao", "Malaria");
+        Jogo jogo2 = new Jogo("Tyciani", "Gripe");
         // após 5 jogadas entra no podio:
         primeiros.addPlayer(jogo1.jogar(), jogo1.getNome());
+        primeiros.addPlayer(jogo2.jogar(), jogo2.getNome());
         primeiros.showLeaders();
-
   
 
     }
