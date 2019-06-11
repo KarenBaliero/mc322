@@ -1,0 +1,21 @@
+import java.util.Random
+
+String[] primeira_linha_matriz;
+String[][] outras_linhas;
+DataSetComponent aux = new DataSetComponent();
+aux.setDataSource("CAMINHO DO ARQUIVO A SER LIDO	");
+primeira_linha_matriz = aux.requestAttributes();
+outras_linhas = aux.requestInstances();
+
+int numero = random.nextInt(outras_linhas.length);
+
+String[] doencagerada = new string[];
+doencagerada = outraslinhas[numero];
+String[] saida = new string[];
+
+for(int j=0;j<doencagerada.length;j++){
+	if (doencagerada[j].equalsIgnoreCase("t") || doencagerada[j].equalsIgnoreCase("true") || doencagerada[j].equalsIgnoreCase("1")){
+		saida.add(primeira_linha_matriz[j]);
+	}
+
+}
