@@ -1,21 +1,18 @@
-public class Sintomas(){
-    ArrayList<String> sintomas;
+public class Sintomas{
+    String linha[] = {"Malaria","dor de barriga", "dor de cabeca", "lingua amarela", "febre"};
     public Sintomas(){
-        sintomas = new ArrayList<String>;
     }
     
-    public class void mostrasintomas(){
+    public void mostrasintomas(){
         System.out.println("O seu paciente tem esses sintomas: ");
-        for(int r=1; r < sintomas.size();r++ ){
-            System.out.println(sintomas.get(r));
+        for(int r=1; r < linha.length; r++){
+            System.out.println(linha[r]);
         }
-        
         System.out.println("Qual a doenca?");
-        
     }
     
-    public class int advinhadoenca(String resposta){
-        if(sintomas.get(0).equals(resposta)){
+    public int advinhadoenca(String resposta){
+        if(linha[0].equals(resposta)){
             return 1;
         }
         else 
