@@ -1,3 +1,4 @@
+/*Crédito, esse codigo foi baseado ao algoritmo feito pelo usário do git rodrigovilar,com minhas devidas modificações para o projeto*/
 package Binario_Componente;
 
 public class ArvoreAvl {
