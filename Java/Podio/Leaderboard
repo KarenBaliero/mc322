@@ -21,7 +21,7 @@ public class Leaderboard{
     public void atualizaLeader(){
         int pos_novo = 5;
         for(int i=4; i>=0; i--){
-            if(vencedores.get(pos_novo).getScore() > vencedores.get(i).getScore()){
+            if(vencedores.get(pos_novo).getScore() > vencedores.get(i).getScore() || vencedores.get(i).getName().equals("-")){
                 chanceLeader(pos_novo, i);
                 pos_novo--;
             }
