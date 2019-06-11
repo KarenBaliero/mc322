@@ -1,0 +1,47 @@
+import java.util.Random;
+
+public class Gerasints {
+    private String[] primeira_linha_matriz;
+    private String[][] outras_linhas;
+    private String[] doencagerada;
+    private String[] saida;
+    private String[] doencas;
+    
+    public Gerasints(String arq){
+        DataSetComponent aux = new DataSetComponent();
+        aux.setDataSource(arq);
+        primeira_linha_matriz = aux.requestAttributes();
+        outras_linhas = aux.requestInstances();
+    }
+    public String[] doenca_sintomas(){
+        Random random = new Random();
+        int numero = random.nextInt(outras_linhas.length);
+        String[] doencagerada;
+        doencagerada = outras_linhas[numero];
+        int auxi = 0;
+        for(int j=0;j<doencagerada.length;j++){
+            if (doencagerada[j].equalsIgnoreCase("t") || doencagerada[j].equalsIgnoreCase("true") || doencagerada[j].equalsIgnoreCase("1")){
+                auxi++;
+            }
+        }
+        saida = new String[auxi];
+        auxi = 0;
+        for(int j=0;j<doencagerada.length;j++){
+            if (doencagerada[j].equalsIgnoreCase("t") || doencagerada[j].equalsIgnoreCase("true") || doencagerada[j].equalsIgnoreCase("1")){
+                saida[auxi] = primeira_linha_matriz[j] ;
+                auxi++;
+            }
+        }
+        doencas = new String[saida.length + 1];
+        for(int k=0;k<saida.length+1;k++){
+            if(k==0){
+                doencas[k] = doencagerada[doencagerada.length -1];
+            }
+            else{
+                doencas[k] = saida[k-1]; 
+            }
+        }
+        
+        return doencas;
+    }
+}
