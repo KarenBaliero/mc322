@@ -1,4 +1,5 @@
-public class Jogo{
+ public class Jogo{
+            Sintomas listas = new Sintomas();
             String nome;
             public Jogo(String nome){
                 this.nome = nome;
@@ -7,11 +8,10 @@ public class Jogo{
             public int jogar(){
                 int vidas = 3;
                 int pontos = 0;
+                int resposta;
                 
                 for(int i = 0; i<5; i++){
-                    if(vida > 0){
-                        // sort na matriz puxa dados
-                        sintomas = puxa_dados(getMatriz());
+                    if(vidas > 0){
                         // mostra vários sintomas
                         listas.mostrasintomas();
                         // advinha qual é a doenca
@@ -25,9 +25,7 @@ public class Jogo{
                             System.out.println("Parabens voce acertou! Continue tentando");
                             pontos+=10;
                         }
-
                     }
-
                 }
                 return pontos;
             }
