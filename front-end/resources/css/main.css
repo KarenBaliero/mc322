@@ -13,9 +13,6 @@ h1 {
 }
 
 h2.leaderboard {
-<<<<<<< HEAD
-	background-color: #2320C8;
-=======
 	/*background-color: #2320C8; 
 >>>>>>> Adicionado balões de fala e leaderboard consertado
 	box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
@@ -29,12 +26,8 @@ h2.leaderboard {
 	text-align: center;
 	font-size: 50px;
 	font-family: 'Audiowide';
-<<<<<<< HEAD
-	font-style: normal;
-=======
 	font-style: normal;	
 	margin: auto;
->>>>>>> Adicionado balões de fala e leaderboard consertado
 }
 
 p {
@@ -212,13 +205,10 @@ p.final {
 
 img.camaleon {
 	position: absolute;
-<<<<<<< HEAD
 	margin-left: 10%;
 	width: 40%;
-=======
 	margin-left: 13%;	
 	width: 35%;
->>>>>>> Adicionado balões de fala e leaderboard consertado
 }
 
 div.leaderboard {
